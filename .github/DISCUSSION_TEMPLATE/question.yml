@@ -1,0 +1,108 @@
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 👋 Welcome to Support!
+
+        Thanks for asking a question! Please provide as much detail as possible to help us assist you.
+
+        **Before posting:** Search existing discussions to see if your question was already answered.
+
+  - type: dropdown
+    id: language
+    attributes:
+      label: Programming Language
+      description: Which language are you using?
+      options:
+        - C#
+        - Go
+        - Python
+        - Java
+    validations:
+      required: true
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: MetaTrader Platform
+      description: Which version of MetaTrader?
+      options:
+        - MT4
+        - MT5
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Your Question
+      description: What would you like to know?
+      placeholder: "How do I...?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: code
+    attributes:
+      label: Relevant Code
+      description: Share the code you're working with (if applicable)
+      placeholder: |
+        ```csharp
+        // Your code here
+        ```
+    validations:
+      required: false
+
+  - type: textarea
+    id: error
+    attributes:
+      label: Error Message
+      description: If you're getting an error, paste it here
+      placeholder: |
+        Full error message and stack trace
+      render: text
+
+  - type: textarea
+    id: files
+    attributes:
+      label: Project Files / ZIP Archive
+      description: |
+        📦 You can drag & drop your project ZIP file here or attach screenshots.
+        This helps us investigate your issue faster.
+
+        **Please remove sensitive data before uploading:**
+        - API keys and credentials
+        - Account numbers
+        - Personal trading data
+      placeholder: Drag and drop files here or click to attach
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment Details
+      description: Tell us about your setup
+      placeholder: |
+        - Language version: (e.g., .NET 6.0, Python 3.11, Go 1.21, Java 17)
+        - MT4/MT5 build:
+        - Broker: Demo/Live
+        - OS: Windows 11 / macOS / Linux
+    validations:
+      required: false
+
+  - type: textarea
+    id: tried
+    attributes:
+      label: What I've Tried
+      description: What have you already attempted?
+      placeholder: Describe the solutions you've tried
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I've searched existing discussions
+          required: true
+        - label: I've removed sensitive data (API keys, credentials, account info)
+          required: true

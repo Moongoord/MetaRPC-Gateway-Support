@@ -1,0 +1,130 @@
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🐛 Bug Report
+
+        Thanks for reporting a bug! Please provide detailed information to help us investigate and fix the issue.
+
+  - type: dropdown
+    id: language
+    attributes:
+      label: Programming Language
+      description: Which language are you using?
+      options:
+        - C#
+        - Go
+        - Python
+        - Java
+    validations:
+      required: true
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: MetaTrader Platform
+      description: Which version of MetaTrader?
+      options:
+        - MT4
+        - MT5
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: Clear and concise description of the bug
+      placeholder: What happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+      placeholder: Describe the expected behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: How can we reproduce this issue?
+      placeholder: |
+        1. Initialize connection with...
+        2. Call method...
+        3. See error...
+    validations:
+      required: true
+
+  - type: textarea
+    id: code
+    attributes:
+      label: Code Sample
+      description: Minimal code to reproduce the issue
+      placeholder: |
+        ```csharp
+        // Minimal reproduction code
+        ```
+    validations:
+      required: true
+
+  - type: textarea
+    id: error
+    attributes:
+      label: Error Message / Stack Trace
+      description: Complete error output
+      placeholder: |
+        Paste full error message and stack trace here
+      render: text
+
+  - type: textarea
+    id: files
+    attributes:
+      label: Project Files / ZIP Archive
+      description: |
+        📦 You can drag & drop your project ZIP file or log files here.
+        This helps us reproduce and fix the issue faster.
+
+        **Please remove sensitive data before uploading:**
+        - API keys and credentials
+        - Account numbers
+        - Personal trading data
+      placeholder: Drag and drop files here or click to attach
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Your setup details
+      placeholder: |
+        - Language version: (e.g., .NET 6.0, Python 3.11, Go 1.21, Java 17)
+        - MT4/MT5 build:
+        - Broker: (e.g., XYZ Demo)
+        - OS: Windows 11 / macOS / Linux
+        - Any other relevant details
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Additional Logs
+      description: Any relevant log files or additional context
+      placeholder: Paste relevant logs or describe additional context
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I've searched existing issues and discussions
+          required: true
+        - label: I've included a minimal code sample that reproduces the issue
+          required: true
+        - label: I've removed all sensitive data (credentials, account numbers)
+          required: true

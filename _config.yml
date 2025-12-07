@@ -1,0 +1,67 @@
+# Site settings
+title: MetaTrader Gateway Support
+description: Official support documentation for MetaTrader Gateway libraries across multiple programming languages
+baseurl: ""
+url: ""
+
+# Theme
+theme: jekyll-theme-cayman
+# Alternative themes you can try:
+# theme: jekyll-theme-slate
+# theme: jekyll-theme-minimal
+# theme: jekyll-theme-modernist
+
+# Navigation
+navigation:
+  - title: Home
+    url: /
+  - title: FAQ
+    url: /docs/FAQ
+  - title: Discussions
+    url: https://github.com/MetaRPC/Support-for-your-code/discussions
+  - title: Contributing
+    url: /CONTRIBUTING
+
+# Supported languages
+languages:
+  - name: C#
+    mt4: https://github.com/MetaRPC/CSharpMT4
+    mt5: https://github.com/MetaRPC/CSharpMT5
+  - name: Go
+    mt4: https://github.com/MetaRPC/GoMT4
+    mt5: https://github.com/MetaRPC/GoMT5
+  - name: Python
+    mt4: https://github.com/MetaRPC/PythonMT4
+    mt5: https://github.com/MetaRPC/PythonMT5
+  - name: Java
+    mt5: https://github.com/MetaRPC/JavaMT5
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Exclude from processing
+exclude:
+  - .git/
+  - .gitignore
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
+
+# Collections
+collections:
+  docs:
+    output: true
+    permalink: /docs/:path/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "docs"
+    values:
+      layout: "default"
