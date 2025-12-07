@@ -24,7 +24,7 @@ We use **GitHub Discussions** for community support. Choose the appropriate cate
 - **💡 Ideas** - Suggest new features or improvements
 - **🎉 Show and Tell** - Share your projects and trading strategies
 
-[** Go to Discussions**](../../discussions)
+[**Go to Discussions**](../../discussions)
 
 ## 🚀 Getting Started
 
